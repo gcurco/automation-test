@@ -30,12 +30,3 @@ Then('I should see more than {int} results',  async (minimumResults) => {
 
     expect(totalResults).to.be.at.least(minimumResults);
 });
-
-Then('I should see at least {int} results',  async (atleastResults) => {
-    let resultsString = await driver.findElement(By.id('result-stats')).getAttribute("textContent");
-    let split_string = resultsString.split(" ");
-    let unitedInt = split_string[1].replace(/\./g,'');
-    let totalResults = parseInt(unitedInt);
-
-    expect(totalResults).to.be.at.least(atleastResults);
-});

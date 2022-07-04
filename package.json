@@ -1,0 +1,16 @@
+{
+  "name": "automation-test",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter ../automation-test/features/test.feature"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^8.4.0",
+    "selenium-webdriver": "^4.3.0"
+  },
+  "devDependencies": {
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "chai": "^4.3.6",
+    "chromedriver": "^103.0.0"
+  }
+}
